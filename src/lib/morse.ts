@@ -18,7 +18,7 @@ export function encode(text: string): string {
 }
 
 export function decode(morse: string): string {
-  const invMap = Object.entries(morseMap).reduce(
+  const invMap: {[key: string]: string} = Object.entries(morseMap).reduce(
     (acc, [k, v]) => ({ ...acc, [v]: k }),
     {}
   );
